@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Beautiful Rawan 💖</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+            background-size: 400% 400%;
+            animation: gradientShift 10s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            color: #ffffff;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Floating bubbles */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 182, 193, 0.1);
+            animation: float 8s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
+            border: 1px solid rgba(255, 182, 193, 0.2);
+        }
+        
+        .bubble:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-delay: 0s; }
+        .bubble:nth-child(2) { width: 60px; height: 60px; left: 20%; animation-delay: 2s; }
+        .bubble:nth-child(3) { width: 100px; height: 100px; left: 80%; animation-delay: 4s; }
+        .bubble:nth-child(4) { width: 40px; height: 40px; left: 70%; animation-delay: 1s; }
+        .bubble:nth-child(5) { width: 120px; height: 120px; left: 50%; animation-delay: 3s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10%, 90% { opacity: 1; }
+            50% { transform: translateY(-100px) rotate(180deg); }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header {
+            margin-bottom: 40px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: #ffb6c1;
+            text-shadow: 0 0 30px rgba(255, 182, 193, 0.8), 0 0 60px rgba(255, 105, 180, 0.6);
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 30px rgba(255, 182, 193, 0.8), 0 0 60px rgba(255, 105, 180, 0.6); }
+            to { text-shadow: 0 0 40px rgba(255, 182, 193, 1), 0 0 80px rgba(255, 105, 180, 0.8); }
+        }
+        
+        .poem-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 50px 40px;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 182, 193, 0.2);
+        }
+        
+        .poem {
+            font-family: 'Kalam', cursive;
+            font-size: 1.6rem;
+            line-height: 2;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+        
+        .poem-line {
+            margin: 15px 0;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .poem-line:nth-child(1) { animation-delay: 0.2s; }
+        .poem-line:nth-child(2) { animation-delay: 0.4s; }
+        .poem-line:nth-child(3) { animation-delay: 0.6s; }
+        .poem-line:nth-child(4) { animation-delay: 0.8s; }
+        .poem-line:nth-child(5) { animation-delay: 1s; }
+        .poem-line:nth-child(6) { animation-delay: 1.2s; }
+        .poem-line:nth-child(7) { animation-delay: 1.4s; }
+        .poem-line:nth-child(8) { animation-delay: 1.6s; }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .medical-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .stethoscope {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        .stethoscope-body {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #c0c0c0, #808080);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        .stethoscope-tube {
+            width: 6px;
+            height: 120px;
+            background: linear-gradient(to bottom, #555, #888);
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .stethoscope-earpiece {
+            width: 30px;
+            height: 15px;
+            background: #555;
+            border-radius: 15px;
+            position: absolute;
+            top: 10px;
+        }
+        
+        .stethoscope-earpiece.left { left: 60px; transform: rotate(-30deg); }
+        .stethoscope-earpiece.right { right: 60px; transform: rotate(30deg); }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .heart {
+            color: #ff69b4;
+            font-size: 3rem;
+            animation: heartbeat 1.5s ease-in-out infinite;
+            margin: 0 20px;
+            filter: drop-shadow(0 0 15px rgba(255, 105, 180, 0.8));
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            14% { transform: scale(1.3); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.3); }
+            70% { transform: scale(1); }
+        }
+        
+        .heartbeat-line {
+            width: 300px;
+            height: 100px;
+            position: relative;
+            margin: 20px auto;
+        }
+        
+        .heartbeat-line svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .heartbeat-path {
+            stroke: #ff69b4;
+            stroke-width: 3;
+            fill: none;
+            filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.7));
+            animation: drawHeartbeat 3s ease-in-out infinite;
+        }
+        
+        @keyframes drawHeartbeat {
+            0% { stroke-dasharray: 0 1000; }
+            100% { stroke-dasharray: 1000 0; }
+        }
+        
+        .love-message {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid rgba(255, 182, 193, 0.3);
+            box-shadow: 0 0 30px rgba(255, 182, 193, 0.2);
+        }
+        
+        .love-message h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.8rem;
+            color: #ffb6c1;
+            margin-bottom: 25px;
+            text-shadow: 0 0 15px rgba(255, 182, 193, 0.8);
+        }
+        
+        .love-message p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.8;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+        
+        .sparkles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .sparkle {
+            position: absolute;
+            color: #ffb6c1;
+            animation: sparkle 6s linear infinite;
+            font-size: 1.5rem;
+            filter: drop-shadow(0 0 5px rgba(255, 182, 193, 0.8));
+        }
+        
+        @keyframes sparkle {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+        
+        .audio-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 182, 193, 0.2);
+            backdrop-filter: blur(15px);
+            border-radius: 50px;
+            padding: 15px 25px;
+            border: 2px solid rgba(255, 182, 193, 0.4);
+            color: white;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            font-weight: 500;
+        }
+        
+        .audio-control:hover {
+            background: rgba(255, 182, 193, 0.3);
+            transform: scale(1.05);
+        }
+        
+        .audio-control.playing {
+            background: rgba(255, 105, 180, 0.4);
+            border-color: rgba(255, 105, 180, 0.6);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(255, 105, 180, 0.4); }
+            50% { box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(255, 105, 180, 0); }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2.8rem; }
+            .poem { font-size: 1.3rem; }
+            .stethoscope { width: 150px; height: 150px; }
+            .heart { font-size: 2.5rem; }
+            .heartbeat-line { width: 250px; }
+            .love-message { padding: 30px 20px; }
+            .audio-control { 
+                position: relative;
+                top: auto;
+                right: auto;
+                margin: 20px auto;
+                display: block;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    
+    <!-- Sparkles -->
+    <div class="sparkles" id="sparkles"></div>
+    
+    <!-- Audio control -->
+    <div class="audio-control" id="audioControl" onclick="toggleHeartbeat()">
+        🎵 Play Heartbeat
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>✨ For Beautiful Rawan ✨</h1>
+            <p>A soul as pure as starlight, a heart as warm as sunshine</p>
+        </div>
+        
+        <div class="poem-section">
+            <div class="poem">
+                <div class="poem-line">In gardens where the roses bloom so bright,</div>
+                <div class="poem-line">There walks a soul named Rawan, pure delight.</div>
+                <div class="poem-line">With grace that dances like the morning dew,</div>
+                <div class="poem-line">And dreams that paint the sky in colors new.</div>
+                <div class="poem-line">Her laughter rings like silver bells at dawn,</div>
+                <div class="poem-line">A melody that makes all sorrow gone.</div>
+                <div class="poem-line">With gentle hands that heal and hearts that care,</div>
+                <div class="poem-line">She brings to life the magic in the air.</div>
+                <div class="poem-line">Like stethoscopes that listen to life's song,</div>
+                <div class="poem-line">Her presence makes the weak feel brave and strong.</div>
+                <div class="poem-line">Each heartbeat tells a story of her grace,</div>
+                <div class="poem-line">A beacon of hope in this vast, endless space.</div>
+                <div class="poem-line">So here's to Rawan, beautiful and true,</div>
+                <div class="poem-line">May all your dreams and wishes come to you.</div>
+                <div class="poem-line">With love as endless as the starlit night,</div>
+                <div class="poem-line">You are our treasure, our guiding light. 💖</div>
+            </div>
+        </div>
+        
+        <div class="medical-section">
+            <div class="heart">💕</div>
+            
+            <div class="stethoscope">
+                <div class="stethoscope-earpiece left"></div>
+                <div class="stethoscope-earpiece right"></div>
+                <div class="stethoscope-tube"></div>
+                <div class="stethoscope-body">🩺</div>
+            </div>
+            
+            <div class="heart">💖</div>
+        </div>
+        
+        <div class="heartbeat-line">
+            <svg viewBox="0 0 300 100">
+                <path class="heartbeat-path" d="M10,50 L50,50 L60,30 L70,70 L80,20 L90,80 L100,50 L290,50" />
+            </svg>
+        </div>
+        
+        <div class="love-message">
+            <h2>💝 With All Our Love 💝</h2>
+            <p>
+                Dear Rawan, you are a shining star in this world, bringing light wherever you go. 
+                Your kindness touches hearts, your smile brightens days, and your dreams inspire us all. 
+                May your path be filled with endless joy, beautiful moments, and all the love your 
+                wonderful heart deserves. You are cherished, you are valued, and you are loved beyond measure. 
+                Keep shining, beautiful soul! ✨💖🌟
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Create floating sparkles
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.innerHTML = '✨';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.animationDelay = Math.random() * 4 + 's';
+            sparkle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            document.getElementById('sparkles').appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 8000);
+        }
+        
+        // Create sparkles continuously
+        setInterval(createSparkle, 1000);
+        
+        // Heartbeat audio using Web Audio API
+        let audioContext;
+        let isPlaying = false;
+        let heartbeatInterval;
+        
+        async function initAudioContext() {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            
+            if (audioContext.state === 'suspended') {
+                await audioContext.resume();
+            }
+        }
+        
+        function createHeartbeatSound() {
+            if (!audioContext) return;
+            
+            // Create a more realistic heartbeat sound
+            const oscillator1 = audioContext.createOscillator();
+            const oscillator2 = audioContext.createOscillator();
+            const gainNode1 = audioContext.createGain();
+            const gainNode2 = audioContext.createGain();
+            const masterGain = audioContext.createGain();
+            
+            // Connect the audio nodes
+            oscillator1.connect(gainNode1);
+            oscillator2.connect(gainNode2);
+            gainNode1.connect(masterGain);
+            gainNode2.connect(masterGain);
+            masterGain.connect(audioContext.destination);
+            
+            // Set frequencies for a more realistic heartbeat
+            oscillator1.frequency.setValueAtTime(80, audioContext.currentTime);
+            oscillator2.frequency.setValueAtTime(40, audioContext.currentTime);
+            
+            // Set waveforms
+            oscillator1.type = 'sine';
+            oscillator2.type = 'triangle';
+            
+            const now = audioContext.currentTime;
+            const duration = 0.15;
+            
+            // First beat (lub)
+            masterGain.gain.setValueAtTime(0, now);
+            masterGain.gain.linearRampToValueAtTime(0.3, now + 0.02);
+            masterGain.gain.exponentialRampToValueAtTime(0.01, now + duration);
+            
+            gainNode1.gain.setValueAtTime(0.7, now);
+            gainNode2.gain.setValueAtTime(0.3, now);
+            
+            oscillator1.start(now);
+            oscillator1.stop(now + duration);
+            oscillator2.start(now);
+            oscillator2.stop(now + duration);
+            
+            // Second beat (dub) - slightly delayed
+            setTimeout(() => {
+                if (!isPlaying) return;
+                
+                const osc1 = audioContext.createOscillator();
+                const osc2 = audioContext.createOscillator();
+                const gain1 = audioContext.createGain();
+                const gain2 = audioContext.createGain();
+                const master = audioContext.createGain();
+                
+                osc1.connect(gain1);
+                osc2.connect(gain2);
+                gain1.connect(master);
+                gain2.connect(master);
+                master.connect(audioContext.destination);
+                
+                osc1.frequency.setValueAtTime(60, audioContext.currentTime);
+                osc2.frequency.setValueAtTime(30, audioContext.currentTime);
+                osc1.type = 'sine';
+                osc2.type = 'triangle';
+                
+                const now2 = audioContext.currentTime;
+                const duration2 = 0.1;
+                
+                master.gain.setValueAtTime(0, now2);
+                master.gain.linearRampToValueAtTime(0.2, now2 + 0.01);
+                master.gain.exponentialRampToValueAtTime(0.01, now2 + duration2);
+                
+                gain1.gain.setValueAtTime(0.6, now2);
+                gain2.gain.setValueAtTime(0.4, now2);
+                
+                osc1.start(now2);
+                osc1.stop(now2 + duration2);
+                osc2.start(now2);
+                osc2.stop(now2 + duration2);
+            }, 200);
+        }
+        
+        async function toggleHeartbeat() {
+            const button = document.getElementById('audioControl');
+            
+            try {
+                await initAudioContext();
+                
+                if (!isPlaying) {
+                    isPlaying = true;
+                    button.innerHTML = '🔊 Stop Heartbeat';
+                    button.classList.add('playing');
+                    
+                    // Play heartbeat sound every 1.2 seconds
+                    createHeartbeatSound();
+                    heartbeatInterval = setInterval(() => {
+                        if (isPlaying) {
+                            createHeartbeatSound();
+                        }
+                    }, 1200);
+                    
+                } else {
+                    isPlaying = false;
+                    button.innerHTML = '🎵 Play Heartbeat';
+                    button.classList.remove('playing');
+                    
+                    if (heartbeatInterval) {
+                        clearInterval(heartbeatInterval);
+                    }
+                }
+            } catch (error) {
+                console.error('Audio context error:', error);
+                button.innerHTML = '❌ Audio Error';
+            }
+        }
+        
+        // Add some interactive hearts that follow mouse
+        document.addEventListener('mousemove', function(e) {
+            if (Math.random() > 0.97) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '💖';
+                heart.style.position = 'fixed';
+                heart.style.left = e.clientX + 'px';
+                heart.style.top = e.clientY + 'px';
+                heart.style.fontSize = '18px';
+                heart.style.pointerEvents = 'none';
+                heart.style.zIndex = '1000';
+                heart.style.animation = 'mouseFloat 3s ease-out forwards';
+                heart.style.filter = 'drop-shadow(0 0 5px rgba(255, 105, 180, 0.8))';
+                document.body.appendChild(heart);
+                
+                setTimeout(() => {
+                    heart.remove();
+                }, 3000);
+            }
+        });
+        
+        // Add floating animation for mouse hearts
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes mouseFloat {
+                0% { transform: translateY(0px) scale(1); opacity: 1; }
+                100% { transform: translateY(-80px) scale(0.3); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Auto-start sparkles after page load
+        setTimeout(() => {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(createSparkle, i * 200);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
